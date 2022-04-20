@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `BaseballDatabase`.`PlayerPitching` (
   INDEX `fk_PlayerPitching_TeamPitching1_idx` (`TeamAbrv` ASC),
   CONSTRAINT `fk_PlayerPitching_TeamPitching1`
     FOREIGN KEY (`TeamAbrv`)
-    REFERENCES `BaseballDatabase`.`TeamPitching` (`TeamAbrv`)
+    REFERENCES `BaseballDatabase`.`Team` (`TeamAbrv`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -202,6 +202,72 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+
+-- -----------------------------------------------------
+-- Stored Procedures
+-- -----------------------------------------------------
+
+-- Getting team abbrivieations
+DELIMITER $$
+CREATE PROCEDURE GetTeamAbrv()
+BEGIN
+	SELECT TeamAbrv FROM baseballdatabase.team;
+END $$
+DELIMITER ;
+
+-- Getting team batting by team abbreviations
+DELIMITER $$
+CREATE PROCEDURE GetTeamBatting(
+	IN teamAbbreviation VARCHAR(3)
+)
+BEGIN
+	SELECT * FROM baseballdatabase.playerbatting WHERE TeamAbrv=teamAbbreviation;
+END $$
+DELIMITER ;
+
+-- Getting team pitching by team abbreviations
+DELIMITER $$
+CREATE PROCEDURE GetTeamPitching(
+	IN teamAbbreviation VARCHAR(3)
+)
+BEGIN
+	SELECT * FROM baseballdatabase.playerpitching WHERE TeamAbrv=teamAbbreviation;
+END $$
+DELIMITER ;
+
+-- Getting Player batting by player name
+DELIMITER $$
+DELIMITER $$
+CREATE PROCEDURE GetPlayerBatting(
+	IN PlayerFirstName VARCHAR(45),
+    IN PlayerLastName VARCHAR(45)
+)
+BEGIN
+	SELECT * FROM baseballdatabase.playerbatting 
+    WHERE (FirstName=PlayerFirstName)
+	AND (LastName=PlayerLastName)
+    OR (FirstName=PlayerLastName)
+    AND (LastName=PlayerFirstName);
+END $$
+DELIMITER ;
+
+-- Getting Player pitching by player name
+DELIMITER $$
+CREATE PROCEDURE GetPlayerPitching(
+	IN PlayerFirstName VARCHAR(45),
+    IN PlayerLastName VARCHAR(45)
+)
+BEGIN
+	SELECT * FROM baseballdatabase.playerpitching
+    WHERE (FirstName=PlayerFirstName)
+	AND (LastName=PlayerLastName)
+    OR (FirstName=PlayerLastName)
+    AND (LastName=PlayerFirstName);
+END $$
+DELIMITER ;
 
 
 -- -----------------------------------------------------

@@ -1,0 +1,41 @@
+﻿<Window x:Class="PresentationLayer.TeamPitchingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="TeamPitching" Height="450" Width="1475">
+	<Grid>
+		<DataGrid Name="TeamDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Rank" Binding="{Binding Rank}"></DataGridTextColumn >
+				<DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"></DataGridTextColumn>
+				<DataGridTextColumn Header="LastName" Binding="{Binding LastName}"></DataGridTextColumn>
+				<DataGridTextColumn Header="StrikeOuts" Binding="{Binding StrikeOuts}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Year" Binding="{Binding Year}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Age" Binding="{Binding Age}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Team" Binding="{Binding TeamAbrv}"></DataGridTextColumn>
+				<DataGridTextColumn Header="League" Binding="{Binding League}"></DataGridTextColumn>
+				<DataGridTextColumn Header="GamesPitched" Binding="{Binding GamesPitched}"></DataGridTextColumn>
+				<DataGridTextColumn Header="GamesStarted" Binding="{Binding GamesStarted}"></DataGridTextColumn>
+				<DataGridTextColumn Header="CompleteGames" Binding="{Binding CompleteGames}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Shutouts" Binding="{Binding Shutouts}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Wins" Binding="{Binding Wins}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Losses" Binding="{Binding Losses}"></DataGridTextColumn>
+				<DataGridTextColumn Header="WinLossPercent" Binding="{Binding WinLossPercent}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Saves" Binding="{Binding Saves}"></DataGridTextColumn>
+				<DataGridTextColumn Header="InningsPitched" Binding="{Binding InningsPitched}"></DataGridTextColumn>
+				<DataGridTextColumn Header="HitsAllowed" Binding="{Binding HitsAllowed}"></DataGridTextColumn>
+				<DataGridTextColumn Header="RunsAllowed" Binding="{Binding RunsAllowed}"></DataGridTextColumn>
+				<DataGridTextColumn Header="EarnedRunsAllowed" Binding="{Binding EarnedRunsAllowed}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Walks" Binding="{Binding Walks}"></DataGridTextColumn>
+				<DataGridTextColumn Header="ERA" Binding="{Binding ERA}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Pitches" Binding="{Binding Pitches}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Strikes" Binding="{Binding Walks}"></DataGridTextColumn>
+			</DataGrid.Columns>
+			
+		</DataGrid>
+		
+	</Grid>
+</Window>

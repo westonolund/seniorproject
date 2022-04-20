@@ -1,0 +1,12 @@
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\bin\Debug\net6.0-windows\LogicLayer.deps.json
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\bin\Debug\net6.0-windows\LogicLayer.dll
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\bin\Debug\net6.0-windows\LogicLayer.pdb
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.csproj.AssemblyReference.cache
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.AssemblyInfoInputs.cache
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.AssemblyInfo.cs
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.dll
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\refint\LogicLayer.dll
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\LogicLayer.pdb
+C:\Users\Weston\source\repos\SeniorProject\LogicLayer\obj\Debug\net6.0-windows\ref\LogicLayer.dll

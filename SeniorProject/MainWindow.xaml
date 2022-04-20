@@ -1,0 +1,53 @@
+﻿<Window x:Class="SeniorProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeniorProject"
+        mc:Ignorable="d"
+        Title="Search Window" Height="500" Width="450">
+	<TabControl>
+		<TabItem Header="Team">
+			<Grid Background="#ededed" ShowGridLines="False">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition></RowDefinition>
+					<RowDefinition></RowDefinition>
+					<RowDefinition></RowDefinition>
+				</Grid.RowDefinitions>
+				<Label Grid.ColumnSpan="3" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Team Search" FontFamily="Arial Black" FontWeight="Bold" FontSize="18"/>
+				<Label Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Team"/>
+				<ComboBox Grid.Row="1" Grid.Column="1" Name="TeamDropDown" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,20,10,10" VerticalAlignment="Top" Width="100" Text="Teams"/>
+				<RadioButton Name="TeamPitchingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" IsChecked="True" VerticalAlignment="Bottom" />
+				<RadioButton Name="TeamBattingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Bottom"/>
+				<Button Name="SearchTeam" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Team" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchTeam_Click"/>
+			</Grid>
+		</TabItem>
+		<TabItem Header="Player">
+			<Grid Background="#ededed" ShowGridLines="False">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition></RowDefinition>
+					<RowDefinition></RowDefinition>
+					<RowDefinition></RowDefinition>
+				</Grid.RowDefinitions>
+				<Label Grid.ColumnSpan="3" Grid.Row="0" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Player Search" FontFamily="Arial Black" FontWeight="Bold" FontSize="18"/>
+				<Button Name="SearchPlayerBtn" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Player" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchPlayerBtn_Click"/>
+				<Label Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Player"/>
+				<TextBox Name="SearchPlayerTxtBox" Grid.Row="1" Grid.Column="1" Width="100" Height="25" Text="Player Name..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,10,10" />
+				<RadioButton Name="PlayerPitchingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" IsChecked="True" VerticalAlignment="Bottom" />
+				<RadioButton Name="PlayerBattingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Bottom"/>
+			</Grid>
+		</TabItem>
+	</TabControl>
+
+	
+</Window>

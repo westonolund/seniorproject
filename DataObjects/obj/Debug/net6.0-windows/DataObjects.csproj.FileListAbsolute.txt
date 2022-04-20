@@ -1,0 +1,12 @@
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\bin\Debug\net6.0-windows\DataObjects.deps.json
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\bin\Debug\net6.0-windows\DataObjects.dll
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\bin\Debug\net6.0-windows\DataObjects.pdb
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.csproj.AssemblyReference.cache
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.AssemblyInfoInputs.cache
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.AssemblyInfo.cs
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.csproj.CoreCompileInputs.cache
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.dll
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\refint\DataObjects.dll
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\DataObjects.pdb
+C:\Users\Weston\source\repos\SeniorProject\DataObjects\obj\Debug\net6.0-windows\ref\DataObjects.dll
