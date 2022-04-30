@@ -13,10 +13,14 @@ namespace DataAccessLayer
     {
         private string connectionString;
         public MySqlConnection connection;
+        string server = "baseballdatabase.cpz0as23ed7o.us-east-2.rds.amazonaws.com";
+        string database = "BaseballDatabase";
+        string userid = "admin";
+        string password = "password";
 
         public DBConnection()
         {
-        connectionString = "server=localhost;database=BaseballDatabase;uid=admin;pwd=password;";
+        connectionString = "server=" + server + ";database=" + database + ";uid=" + userid + ";pwd=" + password + ";";
         connection = new MySqlConnection(connectionString);
         }
 

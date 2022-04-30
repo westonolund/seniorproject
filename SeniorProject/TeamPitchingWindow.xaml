@@ -7,7 +7,18 @@
         mc:Ignorable="d"
         Title="TeamPitching" Height="450" Width="1475">
 	<Grid>
-		<DataGrid Name="TeamDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="25"></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition Width="25"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="50"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Label Name="Mainlbl" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Main Content" Margin="10,10,10,10"></Label>
+		<DataGrid Grid.Column="1" Grid.Row="1" Name="TeamDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Rank" Binding="{Binding Rank}"></DataGridTextColumn >
 				<DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"></DataGridTextColumn>

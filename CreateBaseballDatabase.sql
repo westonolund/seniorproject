@@ -214,7 +214,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 DELIMITER $$
 CREATE PROCEDURE GetTeamAbrv()
 BEGIN
-	SELECT TeamAbrv FROM baseballdatabase.team;
+	SELECT TeamAbrv FROM BaseballDatabase.Team;
 END $$
 DELIMITER ;
 
@@ -224,7 +224,7 @@ CREATE PROCEDURE GetTeamBatting(
 	IN teamAbbreviation VARCHAR(3)
 )
 BEGIN
-	SELECT * FROM baseballdatabase.playerbatting WHERE TeamAbrv=teamAbbreviation;
+	SELECT * FROM BaseballDatabase.PlayerBatting WHERE TeamAbrv=teamAbbreviation;
 END $$
 DELIMITER ;
 
@@ -234,19 +234,18 @@ CREATE PROCEDURE GetTeamPitching(
 	IN teamAbbreviation VARCHAR(3)
 )
 BEGIN
-	SELECT * FROM baseballdatabase.playerpitching WHERE TeamAbrv=teamAbbreviation;
+	SELECT * FROM BaseballDatabase.PlayerPitching WHERE TeamAbrv=teamAbbreviation;
 END $$
 DELIMITER ;
 
 -- Getting Player batting by player name
-DELIMITER $$
 DELIMITER $$
 CREATE PROCEDURE GetPlayerBatting(
 	IN PlayerFirstName VARCHAR(45),
     IN PlayerLastName VARCHAR(45)
 )
 BEGIN
-	SELECT * FROM baseballdatabase.playerbatting 
+	SELECT * FROM BaseballDatabase.PlayerBatting 
     WHERE (FirstName=PlayerFirstName)
 	AND (LastName=PlayerLastName)
     OR (FirstName=PlayerLastName)
@@ -261,13 +260,52 @@ CREATE PROCEDURE GetPlayerPitching(
     IN PlayerLastName VARCHAR(45)
 )
 BEGIN
-	SELECT * FROM baseballdatabase.playerpitching
+	SELECT * FROM BaseballDatabase.PlayerPitching
     WHERE (FirstName=PlayerFirstName)
 	AND (LastName=PlayerLastName)
     OR (FirstName=PlayerLastName)
     AND (LastName=PlayerFirstName);
 END $$
 DELIMITER ;
+
+-- Getting all player names
+DELIMITER $$
+CREATE PROCEDURE GetPlayers()
+BEGIN
+	SELECT * FROM BaseballDatabase.Player;
+END $$
+DELIMITER ;
+
+-- Getting all player batting names, position, and team
+DELIMITER $$
+CREATE PROCEDURE GetPlayersBatting()
+BEGIN
+	SELECT p.FirstName, p.LastName, pb.Position, pb.TeamAbrv
+	FROM Player AS p
+	JOIN PlayerBatting AS pb ON pb.FirstName = p.FirstName AND pb.LastName = p.LastName;
+END $$
+DELIMITER ;
+
+-- Getting all Player pitching names, and team
+DELIMITER $$
+CREATE PROCEDURE GetPlayersPitching()
+BEGIN
+	SELECT p.FirstName, p.LastName, pp.TeamAbrv
+	FROM Player AS p
+	JOIN PlayerPitching AS pp ON pp.FirstName = p.FirstName AND pp.LastName = p.LastName;
+END $$
+DELIMITER ;
+
+-- Getting all Players batting info by position
+DELIMITER $$
+CREATE PROCEDURE GetPositionBatting(
+	IN pos VARCHAR(2)
+)
+BEGIN
+	SELECT * FROM BaseballDatabase.PlayerBatting WHERE Position=pos;
+END $$
+DELIMITER ;
+
 
 
 -- -----------------------------------------------------
@@ -931,7 +969,7 @@ INSERT INTO Team(TeamAbrv,TeamName) VALUES
 -- Insert into Team Pitching Table
 -- -----------------------------------------------------
 
-INSERT INTO `baseballdatabase`.`teampitching`
+INSERT INTO `BaseballDatabase`.`TeamPitching`
 (`TeamAbrv`,
 `Rank`,
 `Year`,
@@ -986,7 +1024,7 @@ VALUES
 -- Insert into Team Batting Table
 -- -----------------------------------------------------
 
-INSERT INTO `baseballdatabase`.`teambatting`
+INSERT INTO `BaseballDatabase`.`TeamBatting`
 (`TeamAbrv`,
 `Year`,
 `League`,
@@ -1041,7 +1079,7 @@ VALUES
 -- Insert into Player Pitching
 -- -----------------------------------------------------
 
-INSERT INTO `baseballdatabase`.`playerpitching`
+INSERT INTO `BaseballDatabase`.`PlayerPitching`
 (`Rank`,
 `FirstName`,
 `LastName`,
@@ -1373,7 +1411,7 @@ VALUES
 -- Insert into Player Batting
 -- -----------------------------------------------------
 
-INSERT INTO `baseballdatabase`.`playerbatting`
+INSERT INTO `BaseballDatabase`.`PlayerBatting`
 (`Rank`,
 `FirstName`,
 `LastName`,
@@ -1702,7 +1740,7 @@ VALUES
 -- Insert into Best Player Batting
 -- -----------------------------------------------------
 
-INSERT INTO `baseballdatabase`.`bestplayerbatting`
+INSERT INTO `BaseballDatabase`.`BestPlayerBatting`
 (`Rank`,
 `FirstName`,
 `LastName`,

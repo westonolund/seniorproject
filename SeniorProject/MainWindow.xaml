@@ -6,48 +6,87 @@
         xmlns:local="clr-namespace:SeniorProject"
         mc:Ignorable="d"
         Title="Search Window" Height="500" Width="450">
-	<TabControl>
-		<TabItem Header="Team">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<Label Content="MLB Stat Tracker" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial Black" FontWeight="Bold" FontSize="18"/>
+		<TabControl Grid.Row="1">
+			<TabItem Header="Team">
 			<Grid Background="#ededed" ShowGridLines="False">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition></ColumnDefinition>
 					<ColumnDefinition></ColumnDefinition>
 					<ColumnDefinition></ColumnDefinition>
 				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition></RowDefinition>
-					<RowDefinition></RowDefinition>
-					<RowDefinition></RowDefinition>
-				</Grid.RowDefinitions>
-				<Label Grid.ColumnSpan="3" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Team Search" FontFamily="Arial Black" FontWeight="Bold" FontSize="18"/>
-				<Label Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Team"/>
-				<ComboBox Grid.Row="1" Grid.Column="1" Name="TeamDropDown" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,20,10,10" VerticalAlignment="Top" Width="100" Text="Teams"/>
-				<RadioButton Name="TeamPitchingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" IsChecked="True" VerticalAlignment="Bottom" />
-				<RadioButton Name="TeamBattingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Bottom"/>
-				<Button Name="SearchTeam" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Team" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchTeam_Click"/>
-			</Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+					</Grid.RowDefinitions>
+					<Label Grid.Row="0" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Team"/>
+					<ComboBox Grid.Row="0" Grid.Column="1" Name="TeamDropDown" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,20,10,10" VerticalAlignment="Top" Width="100" Text="Teams"/>
+					<RadioButton Name="TeamPitchingRadioButton" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" IsChecked="True" VerticalAlignment="Center" />
+					<RadioButton Name="TeamBattingRadioButton" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Center"/>
+					<Button Name="SearchTeam" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Team" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchTeam_Click"/>
+				</Grid>
+			
 		</TabItem>
-		<TabItem Header="Player">
+			<TabItem Header="Player">
 			<Grid Background="#ededed" ShowGridLines="False">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition></ColumnDefinition>
 					<ColumnDefinition></ColumnDefinition>
 					<ColumnDefinition></ColumnDefinition>
 				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition></RowDefinition>
-					<RowDefinition></RowDefinition>
-					<RowDefinition></RowDefinition>
-				</Grid.RowDefinitions>
-				<Label Grid.ColumnSpan="3" Grid.Row="0" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Player Search" FontFamily="Arial Black" FontWeight="Bold" FontSize="18"/>
-				<Button Name="SearchPlayerBtn" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Player" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchPlayerBtn_Click"/>
-				<Label Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Player"/>
-				<TextBox Name="SearchPlayerTxtBox" Grid.Row="1" Grid.Column="1" Width="100" Height="25" Text="Player Name..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,10,10" />
-				<RadioButton Name="PlayerPitchingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" IsChecked="True" VerticalAlignment="Bottom" />
-				<RadioButton Name="PlayerBattingRadioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Bottom"/>
-			</Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+					</Grid.RowDefinitions>
+					<Button Name="SearchPlayerBtn" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Player" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchPlayerBtn_Click"/>
+				<Label Grid.Row="0" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Player"/>
+				<TextBox Text="Player Name..." Name="SearchPlayerTxtBox" Grid.Row="0" Grid.Column="1" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,10,10" KeyUp="SearchPlayerTxtBox_KeyUp" ForceCursor="True" />
+				<Border Visibility="Hidden" Grid.Row="0" Grid.Column="2" Width="135" Height="135" BorderBrush="Black" BorderThickness="1" Grid.RowSpan="2">
+					<ScrollViewer VerticalScrollBarVisibility="Auto">
+						<StackPanel Name="resultStack"></StackPanel>
+					</ScrollViewer>
+				</Border>
+					<RadioButton Name="PlayerPitchingRadioButton" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Content="Pitching" Height="25" VerticalAlignment="Center" Checked="PlayerPitchingRadioButton_Checked" />
+					<RadioButton Name="PlayerBattingRadioButton" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="10,10,0,10" Content="Batting" Height="25" VerticalAlignment="Center" Checked="PlayerBattingRadioButton_Checked"/>
+					<Label Content="Advanced Search" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,10,10,10"></Label>
+					<Button Name="btnOn" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="On" Margin="0,10,10,10" Click="btnOn_Click"></Button>
+					<Button Name="btnOff" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Off" Margin="20,10,10,10" Click="btnOff_Click"></Button>
+					<Label Name="Teamlbl" Visibility="Collapsed"  Content="Team" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,10,10"></Label>
+					<Label Name="Positionlbl" Visibility="Collapsed" Content="Position" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,10,10,10"></Label>
+					<ComboBox Visibility="Collapsed" Grid.Row="1" Grid.Column="1" Name="TeamDropDownSearch" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,10,10,10" VerticalAlignment="Center" Width="100" Text="Teams"/>
+					<ComboBox IsEnabled="False" Visibility="Collapsed" Grid.Row="1" Grid.Column="1" Name="PositionDropDownSearch" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,10,10,10" VerticalAlignment="Bottom" Width="100" Text="Teams"/>
+				</Grid>
 		</TabItem>
+			<TabItem Header="Position">
+				<Grid Background="#ededed" ShowGridLines="False">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition></ColumnDefinition>
+						<ColumnDefinition></ColumnDefinition>
+						<ColumnDefinition></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+						<RowDefinition></RowDefinition>
+					</Grid.RowDefinitions>
+					<Label Grid.Row="0" Grid.Column="1" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Position"/>
+					<ComboBox Grid.Row="0" Grid.Column="1" Name="PositionDropDown" d:ItemsSource="{Binding}" HorizontalAlignment="Left" Height="25" Margin="10,20,10,10" VerticalAlignment="Top" Width="100" Text="Positions"/>
+					<Button Name="SearchPosition" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Width="100" Height="25" Content="Search Position" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SearchPosition_Click" />
+				</Grid>
+				
+			</TabItem>
 	</TabControl>
+	</Grid>
 
-	
+
 </Window>

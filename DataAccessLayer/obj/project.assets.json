@@ -879,11 +879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Weston\\source\\repos\\SeniorProject\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Weston\\source\\repos\\Project\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "C:\\Users\\Weston\\source\\repos\\SeniorProject\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectPath": "C:\\Users\\Weston\\source\\repos\\Project\\DataAccessLayer\\DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\Weston\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Weston\\source\\repos\\SeniorProject\\DataAccessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Weston\\source\\repos\\Project\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -905,8 +905,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Weston\\source\\repos\\SeniorProject\\DataObjects\\DataObjects.csproj": {
-              "projectPath": "C:\\Users\\Weston\\source\\repos\\SeniorProject\\DataObjects\\DataObjects.csproj"
+            "C:\\Users\\Weston\\source\\repos\\Project\\DataObjects\\DataObjects.csproj": {
+              "projectPath": "C:\\Users\\Weston\\source\\repos\\Project\\DataObjects\\DataObjects.csproj"
             }
           }
         }
@@ -944,7 +944,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

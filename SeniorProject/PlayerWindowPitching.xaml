@@ -24,40 +24,40 @@
 		</Grid.RowDefinitions>
 		<Label Name="PlayerNameLbl" Content="Name" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 		<Image Grid.Row="0" Grid.Column="0" Height="100" Grid.RowSpan="2" Width="100" Source="avatar.png"/>
-		<Label Content="Hits" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
-		<Label Content="Strikeouts" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-		<Label Content="Home Runs" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
-		<Label Content="RBI's" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="2"/>
-		<Label Content="Batting Average" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
-		<Label Content="Team" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="3"/>
-		<Label Content="Position" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="4"/>
+		<Label Content="Losses" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+		<Label Content="Wins" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+		<Label Content="Saves" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
+		<Label Content="ERA" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="2"/>
+		<Label Content="Complete Games" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+		<Label Content="Shutouts" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="3"/>
+		<Label Content="Strikeouts" FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Margin="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="4"/>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="2" Grid.Row="0" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="HitsTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="LossesTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="1" Grid.Row="1" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="StrikeoutsTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="WinsTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="3" Grid.Row="1" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="HomeRunsTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="SavesTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="2" Grid.Row="2" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="RBIsTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="ERATextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="1" Grid.Row="3" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="BattingAverageTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="CompleteGamesTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="3" Grid.Row="3" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="TeamTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="ShutoutsTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 		<Border BorderBrush="Black" BorderThickness="5,5,5,5" Background="#e1f0e8" Padding="5" CornerRadius="20" Height="70" Width="70" Grid.Column="2" Grid.Row="4" Margin="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" >
-			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="PositionTextBox" Text="TextBlock" FontFamily="Arial"/>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Name="StrikeoutsTextBox" Text="TextBlock" FontFamily="Arial"/>
 		</Border>
 
 

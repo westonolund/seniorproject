@@ -19,6 +19,9 @@
     <Compile Update="TeamPitchingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PositionBattingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TeamPitchingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PositionBattingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

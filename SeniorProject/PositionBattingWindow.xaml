@@ -1,0 +1,46 @@
+﻿<Window x:Class="PresentationLayer.PositionBattingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="1150">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="25"></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition Width="25"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition Height="50"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Label Name="Mainlbl" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Main Content" Margin="10,10,10,10"></Label>
+		<DataGrid Grid.Column="1" Grid.Row="1" Name="PositionDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Rank" Binding="{Binding Rank}"></DataGridTextColumn>
+				<DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"></DataGridTextColumn>
+				<DataGridTextColumn Header="LastName" Binding="{Binding LastName}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Homeruns" Binding="{Binding Homeruns}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Year" Binding="{Binding Year}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Age" Binding="{Binding Age}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Team" Binding="{Binding TeamAbrv}"></DataGridTextColumn>
+				<DataGridTextColumn Header="League" Binding="{Binding League}"></DataGridTextColumn>
+				<DataGridTextColumn Header="GamesPlayed" Binding="{Binding GamesPlayed}"></DataGridTextColumn>
+				<DataGridTextColumn Header="PlateAppearances" Binding="{Binding PlateAppearances}"></DataGridTextColumn>
+				<DataGridTextColumn Header="AtBats" Binding="{Binding AtBats}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Runs" Binding="{Binding Runs}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Hits" Binding="{Binding Hits}"></DataGridTextColumn>
+				<DataGridTextColumn Header="RBI" Binding="{Binding RBI}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Walks" Binding="{Binding Walks}"></DataGridTextColumn>
+				<DataGridTextColumn Header="StrikeOuts" Binding="{Binding StrikeOuts}"></DataGridTextColumn>
+				<DataGridTextColumn Header="StolenBases" Binding="{Binding StolenBases}"></DataGridTextColumn>
+				<DataGridTextColumn Header="BattingAvg" Binding="{Binding BattingAvg}"></DataGridTextColumn>
+				<DataGridTextColumn Header="OnBasePercentage" Binding="{Binding OnBasePercentage}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Position" Binding="{Binding Position}"></DataGridTextColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>

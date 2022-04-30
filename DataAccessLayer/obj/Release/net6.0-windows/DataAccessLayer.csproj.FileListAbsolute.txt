@@ -1,0 +1,15 @@
+C:\Users\Weston\source\repos\Project\DataAccessLayer\bin\Release\net6.0-windows\DataAccessLayer.deps.json
+C:\Users\Weston\source\repos\Project\DataAccessLayer\bin\Release\net6.0-windows\DataAccessLayer.dll
+C:\Users\Weston\source\repos\Project\DataAccessLayer\bin\Release\net6.0-windows\DataAccessLayer.pdb
+C:\Users\Weston\source\repos\Project\DataAccessLayer\bin\Release\net6.0-windows\DataObjects.dll
+C:\Users\Weston\source\repos\Project\DataAccessLayer\bin\Release\net6.0-windows\DataObjects.pdb
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.csproj.CopyComplete
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.dll
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\refint\DataAccessLayer.dll
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.pdb
+C:\Users\Weston\source\repos\Project\DataAccessLayer\obj\Release\net6.0-windows\ref\DataAccessLayer.dll

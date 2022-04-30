@@ -28,13 +28,13 @@ namespace PresentationLayer
 			try
 			{
 				var results = _playerAccessor.getPlayerPitching(playerFirstName, playerSecondName);
-				//HitsTextBox.Text = results.Hits.ToString();
-				//StrikeoutsTextBox.Text = results.StrikeOuts.ToString();
-				//HomeRunsTextBox.Text = results.Homeruns.ToString();
-				//RBIsTextBox.Text = results.RBI.ToString();
-				//BattingAverageTextBox.Text = results.BattingAvg.ToString();
-				//TeamTextBox.Text = results.TeamAbrv.ToString();
-				//PositionTextBox.Text = results.Position.ToString();
+				LossesTextBox.Text = results.Losses.ToString();
+				WinsTextBox.Text = results.Wins.ToString();
+				SavesTextBox.Text = results.Saves.ToString();
+				ERATextBox.Text = results.ERA.ToString();
+				CompleteGamesTextBox.Text = results.CompleteGames.ToString();
+				ShutoutsTextBox.Text = results.Shutouts.ToString();
+				StrikeoutsTextBox.Text = results.StrikeOuts.ToString();				
 				PlayerNameLbl.Content = results.FirstName.ToString() + " " + results.LastName.ToString();
 			}
 			catch (NullReferenceException)
